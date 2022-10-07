@@ -9,7 +9,6 @@ class Solution:
           size: An integer which represents the size of stack and queue.
       """
 
-    
     # Write your code here
     def __init__(self, size):
         """Inits Solution with stack, queue, size, top, front and rear.
@@ -24,12 +23,13 @@ class Solution:
         self.front = -1
 
     def is_stack_empty(self):
+
         """
         Check whether the stack is empty.
         Returns:
           True if it is empty, else returns False.
         """
-        return self.top==-1
+        return self.top == -1
 
     def is_queue_empty(self):
         """
@@ -71,14 +71,14 @@ class Solution:
         Arguments:
             character: A character that will be enqueued to queue.
         """
-         if not self.is_queue_full():
+        if not self.is_queue_full():
             if  self.front == -1:
                 self.front = 0
             self.rear += 1
             self.queue.append(character)
 
-
     def pop_character(self):
+
         """
         Do pop operation if the stack is not empty.
         Returns:
@@ -97,6 +97,7 @@ class Solution:
         if not self.is_queue_empty():
             self.front += 1
             return self.queue[self.front - 1]
+               
 
 
 # read the string text
